@@ -38,10 +38,4 @@ jobs:
 
       - name: SAM デプロイ
         working-directory: TestLambda
-        run: |
-          sam deploy \
-            --no-confirm-changeset \
-            --stack-name test-project \
-            --capabilities CAPABILITY_IAM \
-            --region ap-northeast-1 \
-            --s3-bucket your-existing-sam-deploy-bucket
+        run: sam deploy --no-confirm-changeset --stack-name test-lambda --capabilities CAPABILITY_IAM
