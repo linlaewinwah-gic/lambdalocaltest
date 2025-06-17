@@ -30,12 +30,12 @@ jobs:
       - name: 必要なパッケージをインストール
         run: |
           pip install --upgrade pip
-          pip install -r JMAXMLCALL/hello_world/requirements.txt
-
+          pip install -r jmaXmlCall/hello_world/requirements.txt
+         
       - name: SAM ビルド
-        working-directory: JMAXMLCALL
+        working-directory: jmaXmlCall
         run: sam build
 
       - name: SAM デプロイ
-        working-directory: JMAXMLCALL
+        working-directory: jmaXmlCall
         run: sam deploy --no-confirm-changeset --stack-name test-project --capabilities CAPABILITY_IAM
