@@ -37,5 +37,5 @@ jobs:
         run: sam build
 
       - name: SAM デプロイ
-        working-directory: TestLambda
-        run: sam deploy --stack-name test-lamdba-ll --capabilities CAPABILITY_IAM
+        working-directory: testProject
+        run: sam deploy --no-confirm-changeset --stack-name test-project --capabilities CAPABILITY_IAM
